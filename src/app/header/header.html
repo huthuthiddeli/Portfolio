@@ -1,0 +1,29 @@
+<header
+  [ngClass]="{
+    'bg-gray-900/90 border-b border-gray-400 shadow-md': scrolled,
+    'bg-black/30': !scrolled
+  }"
+  class="fixed top-2 left-1/2 transform -translate-x-1/2 w-1/4 z-50 backdrop-blur-md transition-all duration-300 rounded-xl">
+
+  <ul class="flex justify-center gap-6 text-xl list-none text-white p-4">
+    <li>
+      <a routerLink="/home" routerLinkActive="bg-white/40"
+         class="px-3 py-1 rounded hover:bg-white/20 transition-all duration-200">
+        Work
+      </a>
+    </li>
+    <li>
+      <a routerLink="/about" routerLinkActive="bg-white/40"
+         class="px-3 py-1 rounded hover:bg-white/20 transition-all duration-200">
+        About
+      </a>
+    </li>
+    <li>
+      <a routerLink="/contact" routerLinkActive="bg-white/40"
+         class="px-3 py-1 rounded hover:bg-white/20 transition-all duration-200">
+        Contact
+      </a>
+    </li>
+  </ul>
+
+</header>

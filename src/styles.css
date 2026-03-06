@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'tailwindcss';
+
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow transition;
+}
+
+.nav-link {
+  @apply bg-white/20 px-4 py-2 rounded hover:border hover:border-black hover:opacity-60 font-mono;
+}
+
+.background-glow {
+  position: relative;
+  min-height: 100vh;
+  background: #020617;
+  overflow: hidden;
+}
+
+.background-glow::before,
+.background-glow::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+  animation: float 5s ease-in-out infinite;
+}
+
+.background-glow::before {
+  background: #3b82f6;
+  top: -100px;
+  left: -100px;
+}
+
+.background-glow::after {
+  background: #6366f1;
+  bottom: -100px;
+  right: -100px;
+  animation-delay: 10s;
+}
+
+@keyframes float {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(100px,60px); }
+  100% { transform: translate(0,0); }
+}
+
+.page-container {
+  position: relative;
+}
+
+.page-container > * {
+  animation: pageEnter 350ms ease;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
